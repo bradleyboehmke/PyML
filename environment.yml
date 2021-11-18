@@ -1,0 +1,7 @@
+name: PyML
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python>=3.8
+  - jupyter-book>=0.12.0

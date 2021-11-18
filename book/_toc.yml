@@ -1,0 +1,23 @@
+format: jb-book
+root: intro
+parts:
+- caption: Fundamentals
+  chapters:
+  - file: fundamentals/intro
+  - file: fundamentals/modeling_process
+  - file: fundamentals/feature_eng
+- caption: Package basics
+  chapters:
+  - file: package_basics/content
+- caption: Supervised Learning
+  chapters:
+  - file: supervised_learning/content
+- caption: Dimension Reduction
+  chapters:
+  - file: dimension_reduction/content
+- caption: Clustering
+  chapters:
+  - file: clustering/content
+- caption: Deep Learning
+  chapters:
+  - file: deep_learning/content
