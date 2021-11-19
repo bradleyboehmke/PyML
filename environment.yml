@@ -4,7 +4,10 @@ channels:
   - conda-forge
 dependencies:
   - python>=3.8
+  - category_encoders>=2.2.2
+  - feature_engine>=1.1.0
   - jupyter-book>=0.12.0
+  - missingno>=0.4.2
   - numpy>=1.19
   - pandas>=1.2
   - pip>=21.0.0
