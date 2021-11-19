@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Content with notebooks &#8212; Machine Learning with Python</title>
+    <title>Modeling Process &#8212; Machine Learning with Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,7 +54,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Content with notebooks" href="feature_eng.html" />
-    <link rel="prev" title="Content with notebooks" href="intro.html" />
+    <link rel="prev" title="Machine Learning with Python" href="../intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -104,31 +104,14 @@
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Content with notebooks
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Content with notebooks
+   Modeling Process
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="feature_eng.html">
    Content with notebooks
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Package basics
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../package_basics/content.html">
-   Content in Jupyter Book
   </a>
  </li>
 </ul>
@@ -285,19 +268,122 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#markdown-notebooks">
-   Markdown + notebooks
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Modeling Process
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#myst-markdown">
-   MyST markdown
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-objectives">
+   Learning objectives
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#code-blocks-and-outputs">
-   Code blocks and outputs
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-splitting">
+   Data splitting
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simple-random-sampling">
+     Simple random sampling
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stratified-sampling">
+     Stratified sampling
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#class-imbalances">
+     Class imbalances
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-models">
+   Creating models
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#evaluating-models">
+   Evaluating models
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regression-models">
+     Regression models
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classification-models">
+     Classification models
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resampling-methods">
+   Resampling methods
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#k-fold-cross-validation">
+     <em>
+      k
+     </em>
+     -fold cross validation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bootstrap-sampling">
+     Bootstrap sampling
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#alternatives">
+       Alternatives
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bias-variance-trade-off">
+   Bias variance trade-off
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bias">
+     Bias
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variance">
+     Variance
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hyperparameter-tuning">
+     Hyperparameter tuning
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#putting-the-processes-together">
+   Putting the processes together
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
 </ul>
@@ -311,89 +397,721 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="content-with-notebooks">
-<h1>Content with notebooks<a class="headerlink" href="#content-with-notebooks" title="Permalink to this headline">¶</a></h1>
-<p>You can also create content with Jupyter Notebooks. This means that you can include
-code blocks and their outputs in your book.</p>
-<div class="section" id="markdown-notebooks">
-<h2>Markdown + notebooks<a class="headerlink" href="#markdown-notebooks" title="Permalink to this headline">¶</a></h2>
-<p>As it is markdown, you can embed images, HTML, etc into your posts!</p>
-<p><img alt="" src="https://myst-parser.readthedocs.io/en/latest/_static/logo.png" /></p>
-<p>You an also <span class="math notranslate nohighlight">\(add_{math}\)</span> and</p>
-<div class="math notranslate nohighlight">
-\[
-math^{blocks}
-\]</div>
-<p>or</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\mbox{mean} la_{tex} \\ \\
-math blocks
-\end{aligned}
-\end{split}\]</div>
-<p>But make sure you $Escape $your $dollar signs $you want to keep!</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="modeling-process">
+<h1>Modeling Process<a class="headerlink" href="#modeling-process" title="Permalink to this headline">¶</a></h1>
+<p>Much like EDA, the ML process is very iterative and heuristic-based. With minimal knowledge of the problem or data at hand, it is difficult to know which ML method will perform best.  This is known as the <em>no free lunch</em> theorem for ML <span id="id1">[<a class="reference internal" href="#id19">Wol96</a>]</span>.  Consequently, it is common for many ML approaches to be applied, evaluated, and modified before a final, optimal model can be determined. Performing this process correctly provides great confidence in our outcomes. If not, the results will be useless and, potentially, damaging <a class="footnote-reference brackets" href="#fatml" id="id2">1</a>.</p>
+<p>Approaching ML modeling correctly means approaching it strategically by spending our data wisely on learning and validation procedures, properly pre-processing the feature and target variables, minimizing data leakage, tuning hyperparameters, and assessing model performance. Many books and courses portray the modeling process as a short sprint. A better analogy would be a marathon where many iterations of these steps are repeated before eventually finding the final optimal model. This process is illustrated in the figure below.</p>
+<p><img alt="" src="../_images/modeling_process.png" /></p>
 </div>
-<div class="section" id="myst-markdown">
-<h2>MyST markdown<a class="headerlink" href="#myst-markdown" title="Permalink to this headline">¶</a></h2>
-<p>MyST markdown works in Jupyter Notebooks as well. For more information about MyST markdown, check
-out <a class="reference external" href="https://jupyterbook.org/content/myst.html">the MyST guide in Jupyter Book</a>,
-or see <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">the MyST markdown documentation</a>.</p>
+<div class="tex2jax_ignore mathjax_ignore section" id="learning-objectives">
+<h1>Learning objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h1>
+<p>Before introducing specific algorithms, this module, and the next, introduce concepts that are fundamental to the ML modeling process and that you will see briskly covered in future modules. By the end of this model you will be able to:</p>
+<ol class="simple">
+<li><p>Split your data into training and test sets.</p></li>
+<li><p>Instantiate, train, fit, and evaluate a basic model in both R and Python.</p></li>
+<li><p>Apply <em>k</em>-fold resampling and hyperparameter tuning procedures to improve the robustness and performance of a model.</p></li>
+<li><p>Put these steps together for an end-to-end ML process.</p></li>
+</ol>
 </div>
-<div class="section" id="code-blocks-and-outputs">
-<h2>Code blocks and outputs<a class="headerlink" href="#code-blocks-and-outputs" title="Permalink to this headline">¶</a></h2>
-<p>Jupyter Book will also embed your code blocks and output in your book.
-For example, here’s some sample Matplotlib code:</p>
+<div class="tex2jax_ignore mathjax_ignore section" id="prerequisites">
+<h1>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h1>
+<p>This section leverages the following packages. We will demonstrate concepts on the Ames housing and employee attrition data sets.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Helper packages</span>
+<span class="kn">import</span> <span class="nn">math</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">plotnine</span> <span class="kn">import</span> <span class="n">ggplot</span><span class="p">,</span> <span class="n">aes</span><span class="p">,</span> <span class="n">geom_density</span><span class="p">,</span> <span class="n">geom_line</span><span class="p">,</span> <span class="n">geom_point</span><span class="p">,</span> <span class="n">ggtitle</span><span class="p">,</span> <span class="n">themes</span>
+
+<span class="c1"># Data</span>
+<span class="kn">import</span> <span class="nn">modeldata</span>
+
+<span class="c1"># Modeling process</span>
+<span class="kn">from</span> <span class="nn">sklearn.utils</span> <span class="kn">import</span> <span class="n">resample</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span><span class="p">,</span> <span class="n">KFold</span><span class="p">,</span> <span class="n">RepeatedKFold</span><span class="p">,</span> <span class="n">cross_val_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsRegressor</span><span class="p">,</span> <span class="n">KNeighborsClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span><span class="p">,</span> <span class="n">roc_auc_score</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data used</span>
+<span class="n">ames</span> <span class="o">=</span> <span class="n">modeldata</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;ames&#39;</span><span class="p">)</span>
+<span class="n">attrition</span> <span class="o">=</span> <span class="n">modeldata</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;attrition&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="data-splitting">
+<h1>Data splitting<a class="headerlink" href="#data-splitting" title="Permalink to this headline">¶</a></h1>
+<p>A major goal of the machine learning process is to find an algorithm <span class="math notranslate nohighlight">\(f\left(X\right)\)</span> that most accurately predicts future values (<span class="math notranslate nohighlight">\(\hat{Y}\)</span>) based on a set of features (<span class="math notranslate nohighlight">\(X\)</span>).  In other words, we want an algorithm that not only fits well to our past data, but more importantly, one that predicts a future outcome accurately.  This is called the <em><strong>generalizability</strong></em> of our algorithm.  How we “spend” our data will help us understand how well our algorithm generalizes to unseen data.</p>
+<p>To provide an accurate understanding of the generalizability of our final optimal model, we can split our data into training and test data sets:</p>
+<ul class="simple">
+<li><p><strong>Training set</strong>: these data are used to develop feature sets, train our algorithms, tune hyperparameters, compare models, and all of the other activities required to choose a final model (e.g., the model we want to put into production).</p></li>
+<li><p><strong>Test set</strong>: having chosen a final model, these data are used to estimate an unbiased assessment of the model’s performance, which we refer to as the <em>generalization error</em>.</p></li>
+</ul>
+<p><img alt="" src="../_images/data_split.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is critical that the test set not be used prior to selecting your final model. Assessing results on the test set prior to final model selection biases the model selection process since the testing data will have become part of the model development process.</p>
+</div>
+<p>Given a fixed amount of data, typical recommendations for splitting your data into training-test splits include 60% (training)–40% (testing), 70%–30%, or 80%–20%. Generally speaking, these are appropriate guidelines to follow; however, it is good to keep the following points in mind:</p>
+<ul class="simple">
+<li><p>Spending too much in training (e.g., <span class="math notranslate nohighlight">\(&gt;80\%\)</span>) won’t allow us to get a good assessment of predictive performance.  We may find a model that fits the training data very well, but is not generalizable (<em>overfitting</em>).</p></li>
+<li><p>Sometimes too much spent in testing (<span class="math notranslate nohighlight">\(&gt;40\%\)</span>) won’t allow us to get a good assessment of model parameters.</p></li>
+</ul>
+<p>Other factors should also influence the allocation proportions. For example, very large training sets (e.g., <span class="math notranslate nohighlight">\(n &gt; 100\texttt{K}\)</span>) often result in only marginal gains compared to smaller sample sizes.  Consequently, you may use a smaller training sample to increase computation speed (e.g., models built on larger training sets often take longer to score new data sets in production).  In contrast, as <span class="math notranslate nohighlight">\(p \geq n\)</span> (where <span class="math notranslate nohighlight">\(p\)</span> represents the number of features), larger samples sizes are often required to identify consistent signals in the features.</p>
+<p>The two most common ways of splitting data include <em><strong>simple random sampling</strong></em> and <em><strong>stratified sampling</strong></em>.</p>
+<div class="section" id="simple-random-sampling">
+<h2>Simple random sampling<a class="headerlink" href="#simple-random-sampling" title="Permalink to this headline">¶</a></h2>
+<p>The simplest way to split the data into training and test sets is to take a simple random sample. This does not control for any data attributes, such as the distribution of your response variable (<span class="math notranslate nohighlight">\(Y\)</span>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sampling is a random process so setting the random number generator with a common seed allows for reproducible results.  Throughout this course we’ll often use the seed <code class="docutils literal notranslate"><span class="pre">123</span></code> for reproducibility but the number itself has no special meaning.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create train/test split</span>
+<span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">ames</span><span class="p">,</span> <span class="n">train_size</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span>
+
+<span class="c1"># dimensions of training data</span>
+<span class="n">train</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">8</span><span class="n">f</span><span class="o">/</span><span class="n">c06lv6q17tjbyjv2nkt0_s4s1sh0tg</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_93917</span><span class="o">/</span><span class="mf">2191868119.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2051, 74)
+</pre></div>
+</div>
+</div>
+</div>
+<p>With sufficient sample size, this sampling approach will typically result in a similar distribution of <span class="math notranslate nohighlight">\(Y\)</span> (e.g., <code class="docutils literal notranslate"><span class="pre">Sale_Price</span></code> in the <code class="docutils literal notranslate"><span class="pre">ames</span></code> data) between your <font color="blue">training</font> and <font color="red">test</font> sets, as illustrated below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;train&#39;</span>
+<span class="n">test</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span>
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+<span class="p">(</span><span class="n">ggplot</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">train</span><span class="p">,</span> <span class="n">test</span><span class="p">]),</span> <span class="n">aes</span><span class="p">(</span><span class="s1">&#39;Sale_Price&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">))</span>
+ <span class="o">+</span> <span class="n">geom_density</span><span class="p">()</span>
+ <span class="o">+</span> <span class="n">ggtitle</span><span class="p">(</span><span class="s2">&quot;Random sampling with Python&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/modeling_process_6_0.png" src="../_images/modeling_process_6_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8773038760698)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="stratified-sampling">
+<h2>Stratified sampling<a class="headerlink" href="#stratified-sampling" title="Permalink to this headline">¶</a></h2>
+<p>If we want to explicitly control the sampling so that our training and test sets have similar <span class="math notranslate nohighlight">\(Y\)</span> distributions, we can use stratified sampling.  This is more common with classification problems where the response variable may be severely imbalanced (e.g., 90% of observations with response “Yes” and 10% with response “No”). However, we can also apply stratified sampling to regression problems for data sets that have a small sample size and where the response variable deviates strongly from normality.  With a continuous response variable, stratified sampling will segment <span class="math notranslate nohighlight">\(Y\)</span> into quantiles and randomly sample from each.</p>
+<p>To perform stratified sampling in Python we simply apply the <code class="docutils literal notranslate"><span class="pre">stratify</span></code> argument in <code class="docutils literal notranslate"><span class="pre">train_test_split()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">attrition</span><span class="p">[</span><span class="s2">&quot;Attrition&quot;</span><span class="p">]</span>
+<span class="n">train_strat</span><span class="p">,</span> <span class="n">test_strat</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+    <span class="n">attrition</span><span class="p">,</span> 
+    <span class="n">train_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> 
+    <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">,</span>
+    <span class="n">stratify</span><span class="o">=</span><span class="n">y</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The following illustrates that in our original employee attrition data we have an imbalanced response (No: 84%, Yes: 16%). By enforcing stratified sampling, both our training and testing sets have approximately equal response distributions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">data_set</span> <span class="ow">in</span> <span class="p">[</span><span class="n">attrition</span><span class="p">,</span> <span class="n">train_strat</span><span class="p">,</span> <span class="n">test_strat</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">data_set</span><span class="p">[</span><span class="s2">&quot;Attrition&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No     0.838776
+Yes    0.161224
+Name: Attrition, dtype: float64
+No     0.839002
+Yes    0.160998
+Name: Attrition, dtype: float64
+No     0.838678
+Yes    0.161322
+Name: Attrition, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="class-imbalances">
+<h2>Class imbalances<a class="headerlink" href="#class-imbalances" title="Permalink to this headline">¶</a></h2>
+<p>Imbalanced data can have a significant impact on model predictions and performance <span id="id3">[<a class="reference internal" href="#id20">KJ13</a>]</span>.  Most often this involves classification problems where one class has a very small proportion of observations (e.g., defaults - 5% versus nondefaults - 95%). Several sampling methods have been developed to help remedy class imbalance and most of them can be categorized as either <em>up-sampling</em> or <em>down-sampling</em>.</p>
+<p>Down-sampling balances the dataset by reducing the size of the abundant class(es) to match the frequencies in the least prevalent class. This method is used when the quantity of data is sufficient. By keeping all samples in the rare class and randomly selecting an equal number of samples in the abundant class, a balanced new dataset can be retrieved for further modeling. Furthermore, the reduced sample size reduces the computation burden imposed by further steps in the ML process.</p>
+<p>On the contrary, up-sampling is used when the quantity of data is insufficient. It tries to balance the dataset by increasing the size of rarer samples. Rather than getting rid of abundant samples, new rare samples are generated by using repetition or bootstrapping.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is no absolute advantage of one sampling method over another. Application of these two methods depends on the use case it applies to and the data set itself. A combination of over- and under-sampling is often successful and a common approach is known as Synthetic Minority Over-Sampling Technique, or SMOTE <span id="id4">[<a class="reference internal" href="#id21">CBHK02</a>]</span>.</p>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="creating-models">
+<h1>Creating models<a class="headerlink" href="#creating-models" title="Permalink to this headline">¶</a></h1>
+<p>Throughout this book we will apply many different models so you should become quite comfortable with the process. The process of fitting a model is relatively simple and, in many cases (i.e. Scikit-learn), follows a very common pattern.</p>
+<p>In Python, we are often required to separate our features from our label into discrete data sets. For our first model we will simply use two features from our training data - total square feet of the home (<code class="docutils literal notranslate"><span class="pre">Gr_Liv_Area</span></code>) and year built (<code class="docutils literal notranslate"><span class="pre">Year_Built</span></code>) to predict the sale price.</p>
+<p>Scikit-learn has many modules for different model types. One module is the <a class="reference external" href="https://scikit-learn.org/stable/modules/neighbors.html"><code class="docutils literal notranslate"><span class="pre">sklearn.neighbors</span></code></a> which contains various methods for unsupervised and supervised neighbors-based learning models. In our example, we are going to apply a K-Nearest neighbor regression model since <code class="docutils literal notranslate"><span class="pre">Sale_Price</span></code> is a continuous response. We’ll use <code class="docutils literal notranslate"><span class="pre">KNeighborsRegressor</span></code> to do so and in this example we’ll simply fit our model to 10 neighbors.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We will discuss K-Nearest neighbor (KNN) models in detail in a later module but for now just consider we are trying to predict the price of a home based on the average price of 10 other homes that seem to be most similar it.</p>
+</div>
+<p>First we create the model object (<code class="docutils literal notranslate"><span class="pre">knn</span></code>) and then fit the model to our training data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># separate features from labels</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">train</span><span class="p">[[</span><span class="s2">&quot;Gr_Liv_Area&quot;</span><span class="p">,</span> <span class="s2">&quot;Year_Built&quot;</span><span class="p">]]</span>
+<span class="n">y_train</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="s2">&quot;Sale_Price&quot;</span><span class="p">]</span>
+
+<span class="c1"># fit a KNN regression model with 10 neighbors</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsRegressor</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">m1</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">m1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsRegressor(n_neighbors=10)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We have fit our model, if we want to see our predictions we can simply apply <code class="docutils literal notranslate"><span class="pre">predict()</span></code> and feed it the data set we want to make predictions on:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m1</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([203900. , 129440. , 147725. , ..., 342814.3, 183370. , 142476.9])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="evaluating-models">
+<h1>Evaluating models<a class="headerlink" href="#evaluating-models" title="Permalink to this headline">¶</a></h1>
+<p>It is important to understand how our model is performing. With ML models, measuring performance means understanding the predictive accuracy – the difference between a predicted value and the actual value. We measure predictive accuracy with <em><strong>loss functions</strong></em>.</p>
+<p>There are many loss functions to choose from when assessing the performance of a predictive model, each providing a unique understanding of the predictive accuracy and differing between regression and classification models. Furthermore, the way a loss function is computed will tend to emphasize certain types of errors over others and can lead to drastic differences in how we interpret the “optimal model”. Its important to consider the problem context when identifying the preferred performance metric to use. And when comparing multiple models, we need to compare them across the same metric.</p>
+<div class="section" id="regression-models">
+<h2>Regression models<a class="headerlink" href="#regression-models" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>MSE</strong>: Mean squared error is the average of the squared error (<span class="math notranslate nohighlight">\(MSE = \frac{1}{n} \sum^n_{i=1}(y_i - \hat y_i)^2\)</span>)^[This deviates slightly from the usual definition of MSE in ordinary linear regression, where we divide by <span class="math notranslate nohighlight">\(n-p\)</span> (to adjust for bias) as opposed to <span class="math notranslate nohighlight">\(n\)</span>.]. The squared component results in larger errors having larger penalties.  This (along with RMSE) is the most common error metric to use. <strong>Objective: minimize</strong></p></li>
+<li><p><strong>RMSE</strong>: Root mean squared error.  This simply takes the square root of the MSE metric (<span class="math notranslate nohighlight">\(RMSE = \sqrt{\frac{1}{n} \sum^n_{i=1}(y_i - \hat y_i)^2}\)</span>) so that your error is in the same units as your response variable. If your response variable units are dollars, the units of MSE are dollars-squared, but the RMSE will be in dollars. <strong>Objective: minimize</strong></p></li>
+<li><p><strong>Deviance</strong>: Short for mean residual deviance. In essence, it provides a degree to which a model explains the variation in a set of data when using maximum likelihood estimation. Essentially this compares a saturated model (i.e. fully featured model) to an unsaturated model (i.e. intercept only or average). If the response variable distribution is Gaussian, then it will be approximately equal to MSE.  When not, it usually gives a more useful estimate of error. Deviance is often used with classification models. <a class="footnote-reference brackets" href="#deviance" id="id5">2</a> <strong>Objective: minimize</strong></p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>MAE</strong>: Mean absolute error. Similar to MSE but rather than squaring, it just takes the mean absolute difference between the actual and predicted values (<span class="math notranslate nohighlight">\(MAE = \frac{1}{n} \sum^n_{i=1}(\vert y_i - \hat y_i \vert)\)</span>). This results in less emphasis on larger errors than MSE. <strong>Objective: minimize</strong></p></li>
+<li><p><strong>RMSLE</strong>: Root mean squared logarithmic error. Similar to RMSE but it performs a <code class="docutils literal notranslate"><span class="pre">log()</span></code> on the actual and predicted values prior to computing the difference (<span class="math notranslate nohighlight">\(RMSLE = \sqrt{\frac{1}{n} \sum^n_{i=1}(log(y_i + 1) - log(\hat y_i + 1))^2}\)</span>). When your response variable has a wide range of values, large response values with large errors can dominate the MSE/RMSE metric. RMSLE minimizes this impact so that small response values with large errors can have just as meaningful of an impact as large response values with large errors. <strong>Objective: minimize</strong></p></li>
+<li><p><span class="math notranslate nohighlight">\(R^2\)</span>: This is a popular metric that represents the proportion of the variance in the dependent variable that is predictable from the independent variable(s). Unfortunately, it has several limitations. For example, two models built from two different data sets could have the exact same RMSE but if one has less variability in the response variable then it would have a lower <span class="math notranslate nohighlight">\(R^2\)</span> than the other. You should not place too much emphasis on this metric. <strong>Objective: maximize</strong></p></li>
+</ul>
+<p>Most models we assess in this book will report most, if not all, of these metrics.  We will emphasize MSE and RMSE but it’s important to realize that certain situations warrant emphasis on some metrics more than others.</p>
+<p>The following illustrates how to compute the MSE and RMSE for our training set.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pred</span> <span class="o">=</span> <span class="n">m1</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+
+<span class="c1"># compute MSE</span>
+<span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">pred</span><span class="p">)</span>
+<span class="n">mse</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1845902403.308791
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fixing random state for reproducibility</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">19680801</span><span class="p">)</span>
-
-<span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="n">ii</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
-<span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">)))</span>
-
-
-<span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="kn">import</span> <span class="n">Line2D</span>
-<span class="n">custom_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">0.</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
-                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">.5</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
-                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">1.</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">)]</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">lines</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">custom_lines</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Cold&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium&#39;</span><span class="p">,</span> <span class="s1">&#39;Hot&#39;</span><span class="p">]);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># compute RMSE</span>
+<span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">pred</span><span class="p">,</span> <span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>42963.9663358586
 </pre></div>
 </div>
 </div>
 </div>
-<p>There is a lot more that you can do with outputs (such as including interactive outputs)
-with your book. For more information about this, see <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a></p>
 </div>
+<div class="section" id="classification-models">
+<h2>Classification models<a class="headerlink" href="#classification-models" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Misclassification</strong>: This is the overall error.  For example, say you are predicting 3 classes ( <em>high</em>, <em>medium</em>, <em>low</em> ) and each class has 25, 30, 35 observations respectively (90 observations total). If you misclassify 3 observations of class <em>high</em>, 6 of class <em>medium</em>, and 4 of class <em>low</em>, then you misclassified 13 out of 90 observations resulting in a 14% misclassification rate. <strong>Objective: minimize</strong></p></li>
+<li><p><strong>Mean per class error</strong>\index{mean per class error}: This is the average error rate for each class. For the above example, this would be the mean of <span class="math notranslate nohighlight">\(\frac{3}{25}, \frac{6}{30}, \frac{4}{35}\)</span>, which is 14.5%. If your classes are balanced this will be identical to misclassification. <strong>Objective: minimize</strong></p></li>
+<li><p><strong>MSE</strong>: Mean squared error. Computes the distance from 1.0 to the probability suggested. So, say we have three classes, A, B, and C, and your model predicts a probability of 0.91 for A, 0.07 for B, and 0.02 for C. If the correct answer was A the <span class="math notranslate nohighlight">\(MSE = 0.09^2 = 0.0081\)</span>, if it is B <span class="math notranslate nohighlight">\(MSE = 0.93^2 = 0.8649\)</span>, if it is C <span class="math notranslate nohighlight">\(MSE = 0.98^2 = 0.9604\)</span>. The squared component results in large differences in probabilities for the true class having larger penalties. <strong>Objective: minimize</strong></p></li>
+<li><p><strong>Cross-entropy (aka Log Loss or Deviance)</strong>: Similar to MSE but it incorporates a log of the predicted probability multiplied by the true class.  Consequently, this metric disproportionately punishes predictions where we predict a small probability for the true class, which is another way of saying having high confidence in the wrong answer is really bad. <strong>Objective: minimize</strong></p></li>
+<li><p><strong>Gini index</strong>\index: Mainly used with tree-based methods and commonly referred to as a measure of <em>purity</em> where a small value indicates that a node contains predominantly observations from a single class. <strong>Objective: minimize</strong></p></li>
+</ul>
+<p>When applying classification models, we often use a <em>confusion matrix</em> to evaluate certain performance measures. A confusion matrix is simply a matrix that compares actual categorical levels (or events) to the predicted categorical levels. When we predict the right level, we refer to this as a <em>true positive</em>.  However, if we predict a level or event that did not happen this is called a <em>false positive</em> (i.e. we predicted a customer would redeem a coupon and they did not). Alternatively, when we do not predict a level or event and it does happen that this is called a <em>false negative</em> (i.e. a customer that we did not predict to redeem a coupon does).</p>
+<p><img alt="" src="../_images/confusion-matrix.png" /></p>
+<p>We can extract different levels of performance for binary classifiers.  For example, given the classification (or confusion) matrix illustrated above we can assess the following:</p>
+<ul class="simple">
+<li><p><strong>Accuracy</strong>: Overall, how often is the classifier correct? Opposite of misclassification above. Example: <span class="math notranslate nohighlight">\(\frac{TP + TN}{total} = \frac{100+50}{165} = 0.91\)</span>.  <strong>Objective: maximize</strong></p></li>
+<li><p><strong>Precision</strong>: How accurately does the classifier predict events? This metric is concerned with maximizing the true positives to false positive ratio. In other words, for the number of predictions that we made, how many were correct?  Example: <span class="math notranslate nohighlight">\(\frac{TP}{TP + FP} = \frac{100}{100+10} = 0.91\)</span>.  <strong>Objective: maximize</strong></p></li>
+<li><p><strong>Sensitivity (aka recall)</strong>: How accurately does the classifier classify actual events? This metric is concerned with maximizing the true positives to false negatives ratio. In other words, for the events that occurred, how many did we predict?  Example: <span class="math notranslate nohighlight">\(\frac{TP}{TP + FN} = \frac{100}{100+5} = 0.95\)</span>.  <strong>Objective: maximize</strong></p></li>
+<li><p><strong>Specificity</strong>: How accurately does the classifier classify actual non-events? Example: <span class="math notranslate nohighlight">\(\frac{TN}{TN + FP} = \frac{50}{50+10} = 0.83\)</span>.  <strong>Objective: maximize</strong></p></li>
+</ul>
+<p><img alt="" src="../_images/confusion-matrix2.png" /></p>
+<ul class="simple">
+<li><p><strong>AUC</strong>: Area under the curve. A good binary classifier will have high precision and sensitivity.  This means the classifier does well when it predicts an event will and will not occur, which minimizes false positives and false negatives.  To capture this balance, we often use a ROC curve that plots the false positive rate along the x-axis and the true positive rate along the y-axis.  A line that is diagonal from the lower left corner to the upper right corner represents a random guess. The higher the line is in the upper left-hand corner, the better.  AUC computes the area under this curve. <strong>Objective: maximize</strong></p></li>
+</ul>
+<p><img alt="" src="../_images/modeling-process-roc-1.png" /></p>
+<p>The following is an example of computing the AUC for classification models developed on the Attrition data in Python. Do not be too concerned with understanding all the nuances. The main thing to note is in both cases we follow a similar procedure of fitting our model, computing predicted values, and then comparing the the predicted values to the actual values.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># convert response to binary ints</span>
+<span class="n">train_strat</span><span class="p">[</span><span class="s2">&quot;Attrition&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">((</span><span class="s1">&#39;Yes&#39;</span><span class="p">,</span> <span class="s1">&#39;No&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># separate features from labels</span>
+<span class="n">X_train_strat</span> <span class="o">=</span> <span class="n">train_strat</span><span class="p">[[</span><span class="s2">&quot;DistanceFromHome&quot;</span><span class="p">]]</span>
+<span class="n">y_train_strat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">train_strat</span><span class="p">[</span><span class="s2">&quot;Attrition&quot;</span><span class="p">])</span>
+
+<span class="c1"># fit a KNN regression model with 10 neighbors</span>
+<span class="n">knn2</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">m2</span> <span class="o">=</span> <span class="n">knn2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_strat</span><span class="p">,</span> <span class="n">y_train_strat</span><span class="p">)</span>
+
+<span class="c1"># make predictions</span>
+<span class="n">pred</span> <span class="o">=</span> <span class="n">m2</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_train_strat</span><span class="p">)</span>
+
+<span class="c1"># compute AUC</span>
+<span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_train_strat</span><span class="p">,</span> <span class="n">pred</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6381423677198325
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="resampling-methods">
+<h1>Resampling methods<a class="headerlink" href="#resampling-methods" title="Permalink to this headline">¶</a></h1>
+<p>In the data splitting section we split our data into training and testing sets. Furthermore, we were very explicit about the fact that we <em><strong>do not</strong></em> use the test set to assess model performance during the training phase. So how do we assess the generalization performance of the model?</p>
+<p>One option is to assess an error metric based on the training data, which demonstrated in the last section. Unfortunately, this leads to biased results as some models can perform very well on the training data but not generalize well to a new data set.</p>
+<p>A second method is to use a <em>validation</em> approach, which involves splitting the training set further to create two parts: a training set and a validation set (or <em>holdout set</em>).  We can then train our model(s) on the new training set and estimate the performance on the validation set. Unfortunately, validation using a single holdout set can be highly variable and unreliable unless you are working with very large data sets <span id="id6">[<a class="reference internal" href="#id23">HBM03</a>, <a class="reference internal" href="#id22">MSP05</a>]</span>. As the size of your data set reduces, this concern increases.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although we stick to our definitions of test, validation, and holdout sets, these terms are sometimes used interchangeably in other literature and software. What’s important to remember is to always put a portion of the data under lock and key until a final model has been selected (we refer to this as the test data, but others refer to it as the holdout set).</p>
+</div>
+<p><em><strong>Resampling methods</strong></em> provide an alternative approach by allowing us to repeatedly fit a model of interest to parts of the training data and test its performance on other parts.  The two most commonly used resampling method include <em>k-fold cross validation</em> and <em>bootstrap sampling</em>.</p>
+<div class="section" id="k-fold-cross-validation">
+<h2><em>k</em>-fold cross validation<a class="headerlink" href="#k-fold-cross-validation" title="Permalink to this headline">¶</a></h2>
+<p><em>k</em>-fold cross-validation (aka <em>k</em>-fold CV) is a resampling method that randomly divides the training data into <em>k</em> groups (aka folds) of approximately equal size. The model is fit on <span class="math notranslate nohighlight">\(k-1\)</span> folds and then the remaining fold is used to compute model performance.  This procedure is repeated <em>k</em> times; each time, a different fold is treated as the validation set. This process results in <em>k</em> estimates of the generalization error (say <span class="math notranslate nohighlight">\(\epsilon_1, \epsilon_2, \dots, \epsilon_k\)</span>). Thus, the <em>k</em>-fold CV estimate is computed by averaging the <em>k</em> test errors, providing us with an approximation of the error we might expect on unseen data.</p>
+<p><img alt="" src="../_images/cv.png" /></p>
+<p>Consequently, with <em>k</em>-fold CV, every observation in the training data will be held out one time to be included in the test set as illustrated in the figure below.  In practice, one typically uses <span class="math notranslate nohighlight">\(k = 5\)</span> or <span class="math notranslate nohighlight">\(k = 10\)</span>. There is no formal rule as to the size of <em>k</em>; however, as <em>k</em> gets larger, the difference between the estimated performance and the true performance to be seen on the test set will decrease.  On the other hand, using too large <em>k</em> can introduce computational burdens.  Moreover, <span id="id7">[<a class="reference internal" href="#id22">MSP05</a>]</span> found that <span class="math notranslate nohighlight">\(k=10\)</span> performed similarly to leave-one-out cross validation (LOOCV) which is the most extreme approach (i.e., setting <span class="math notranslate nohighlight">\(k = n\)</span>).</p>
+<p>The following is an illustration of 10-fold cross validation on 32 observations. Each observation is used once for validation and nine times for training.</p>
+<p><img alt="" src="../_images/modeling-process-cv-1.png" /></p>
+<p>Although using <span class="math notranslate nohighlight">\(k \geq 10\)</span> helps to minimize the variability in the estimated performance, <em>k</em>-fold CV still tends to have higher variability than bootstrapping.  <span id="id8">[<a class="reference internal" href="#id31">Kim09</a>]</span> showed that repeating <em>k</em>-fold CV can help to increase the precision of the estimated generalization error.  Consequently, for smaller data sets (say <span class="math notranslate nohighlight">\(n &lt; 10,000\)</span>), 10-fold CV repeated 5 or 10 times will improve the accuracy of your estimated performance and also provide an estimate of its variability.</p>
+<p>In Python we use <code class="docutils literal notranslate"><span class="pre">KFold</span></code>, <code class="docutils literal notranslate"><span class="pre">RepeatedKFold</span></code> to create k-fold objects and then <code class="docutils literal notranslate"><span class="pre">cross_val_score</span></code> to train our model across all <em>k</em> folds and provide our loss score for each fold.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The unified scoring API in scikit-learn always maximizes the score, so scores which need to be minimized are negated in order for the unified scoring API to work correctly. Consequently, you can just interpret the RMSE values below as the <span class="math notranslate nohighlight">\(RMSE \times -1\)</span>.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define loss function</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="s1">&#39;neg_root_mean_squared_error&#39;</span>
+
+<span class="c1"># create 10 fold CV object</span>
+<span class="n">kfold</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># fit model with 10-fold CV</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="n">kfold</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="n">loss</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([45267.95656   , 38068.93573039, 54249.54749718, 44988.28300189,
+       43130.09207265, 51397.22457767, 44031.19784917, 44221.80064193,
+       46013.40890279, 56895.38693064])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># summary stats for all 10 folds</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">results</span><span class="p">))</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count       10.000000
+mean     46826.383376
+std       5664.719215
+min      38068.935730
+25%      44078.848547
+50%      45128.119781
+75%      50051.270659
+max      56895.386931
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 10 fold cross validation repated 5 times (total of 50 folds)</span>
+<span class="n">rkf</span> <span class="o">=</span> <span class="n">RepeatedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">n_repeats</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="n">rkf</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="n">loss</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([45267.95656   , 38068.93573039, 54249.54749718, 44988.28300189,
+       43130.09207265, 51397.22457767, 44031.19784917, 44221.80064193,
+       46013.40890279, 56895.38693064, 40012.0854745 , 45781.02669211,
+       47210.57686127, 46341.75693318, 52671.79237666, 42341.1052296 ,
+       50411.93073906, 56601.52268568, 37421.8708203 , 50986.9046797 ,
+       47928.02839786, 41107.24356594, 42576.49759513, 50769.80559708,
+       44539.10304801, 58298.3148488 , 57055.0826472 , 47110.32845818,
+       39177.00827725, 46378.5120059 , 45295.32814805, 48236.60213812,
+       43566.30396394, 55791.60570805, 41875.2063371 , 46893.22889281,
+       50486.62326192, 47051.5013308 , 47274.57632182, 47981.40640185,
+       54614.47409249, 43428.91173714, 50071.06785418, 39134.91467291,
+       54523.13974144, 45268.16834466, 39335.31161103, 53343.78131609,
+       49694.14607411, 45341.25989443])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># average RMSE across all 50 folds</span>
+<span class="nb">abs</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>47243.83777081275
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="bootstrap-sampling">
+<h2>Bootstrap sampling<a class="headerlink" href="#bootstrap-sampling" title="Permalink to this headline">¶</a></h2>
+<p>A bootstrap sample is a random sample of the data taken with replacement <span id="id9">[<a class="reference internal" href="#id24">FHT01</a>]</span>. This means that, after a data point is selected for inclusion in the subset, it’s still available for further selection. A bootstrap sample is the same size as the original data set from which it was constructed. The figure below provides a schematic of bootstrap sampling where each bootstrap sample contains 12 observations just as in the original data set. Furthermore, bootstrap sampling will contain approximately the same distribution of values (represented by colors) as the original data set.</p>
+<p><img alt="" src="../_images/bootstrap-scheme.png" /></p>
+<p>Since samples are drawn with replacement, each bootstrap sample is likely to contain duplicate values. In fact, on average, <span class="math notranslate nohighlight">\(\approx 63.21\)</span>% of the original sample ends up in any particular bootstrap sample. The original observations not contained in a particular bootstrap sample are considered <em>out-of-bag</em> (OOB). When bootstrapping, a model can be built on the selected samples and validated on the OOB samples; this is often done, for example, in random forests.</p>
+<p>Since observations are replicated in bootstrapping, there tends to be less variability in the error measure compared with <em>k</em>-fold CV <span id="id10">[<a class="reference internal" href="#id25">Efr83</a>]</span>. However, this can also increase the bias of your error estimate.  This can be problematic with smaller data sets; however, for most average-to-large data sets (say <span class="math notranslate nohighlight">\(n \geq 1,000\)</span>) this concern is often negligible.</p>
+<p>The figure that follows compares bootstrapping to 10-fold CV on a small data set with <span class="math notranslate nohighlight">\(n = 32\)</span> observations. A thorough introduction to bootstrappingis provided in <span id="id11">[<a class="reference internal" href="#id26">DH+97</a>]</span>.</p>
+<p><img alt="" src="../_images/modeling-process-sampling-comparison-1.png" /></p>
+<p>Although bootstrapping is not built into scikit-learn as easily as <code class="docutils literal notranslate"><span class="pre">KFold</span></code>, we can create bootstrap samples fairly easily with the <code class="docutils literal notranslate"><span class="pre">sklearn.utils.resamples()</span></code> function as illustrated in the code chunk below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Number of bootstrap samples to be repeated (created)</span>
+<span class="n">n_iterations</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">results</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_iterations</span><span class="p">):</span>
+
+    <span class="c1"># create bootrap samples</span>
+    <span class="n">bs_sample</span> <span class="o">=</span> <span class="n">resample</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+    <span class="n">bs_X_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">bs_sample</span><span class="p">]</span>
+    <span class="n">bs_y_train</span> <span class="o">=</span> <span class="n">y_train</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">bs_sample</span><span class="p">]</span>
+
+    <span class="c1"># get non-selected observations</span>
+    <span class="n">non_selected_rows</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">index</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">bs_sample</span><span class="p">))</span>
+    <span class="n">bs_X_test</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">non_selected_rows</span><span class="p">]</span>
+    <span class="n">bs_y_test</span> <span class="o">=</span> <span class="n">y_train</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">non_selected_rows</span><span class="p">]</span>
+
+    <span class="c1"># fit model</span>
+    <span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsRegressor</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">bs_model</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">bs_X_train</span><span class="p">,</span> <span class="n">bs_y_train</span><span class="p">)</span>
+
+    <span class="c1"># evaluate model</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">bs_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">bs_X_test</span><span class="p">)</span>
+    <span class="n">rmse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">bs_y_test</span><span class="p">,</span> <span class="n">predictions</span><span class="p">,</span> <span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="c1"># report &amp; save results</span>
+    <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rmse</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Bootstrap </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">rmse</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bootstrap 0: 49877.88
+Bootstrap 1: 48359.66
+Bootstrap 2: 46211.96
+Bootstrap 3: 48303.46
+Bootstrap 4: 50625.86
+Bootstrap 5: 48919.41
+Bootstrap 6: 50854.34
+Bootstrap 7: 50620.42
+Bootstrap 8: 48624.72
+Bootstrap 9: 49873.07
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># average bootstrap RMSE</span>
+<span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>49227.07581610941
+</pre></div>
+</div>
+</div>
+</div>
+<p>Bootstrapping is, typically, more of an internal resampling procedure that is naturally built into certain ML algorithms.  This will become more apparent in later chapters where we discuss bagging and random forests, respectively.</p>
+<div class="section" id="alternatives">
+<h3>Alternatives<a class="headerlink" href="#alternatives" title="Permalink to this headline">¶</a></h3>
+<p>It is important to note that there are other useful resampling procedures. If you’re working with time-series specific data then you will want to incorporate rolling origin and other time series resampling procedures, which are also available in scikit-learn.</p>
+<p>Additionally, <span id="id12">[<a class="reference internal" href="#id25">Efr83</a>]</span> developed the “632 method” and <span id="id13">[<a class="reference internal" href="#id27">ET97</a>]</span> discuss the “632+ method”; both approaches seek to minimize biases experienced with bootstrapping on smaller data sets.</p>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="bias-variance-trade-off">
+<h1>Bias variance trade-off<a class="headerlink" href="#bias-variance-trade-off" title="Permalink to this headline">¶</a></h1>
+<p>Prediction errors can be decomposed into two important subcomponents: error due to “bias” and error due to “variance”. There is often a tradeoff between a model’s ability to minimize bias and variance. Understanding how different sources of error lead to bias and variance helps us improve the data fitting process resulting in more accurate models.</p>
+<div class="section" id="bias">
+<h2>Bias<a class="headerlink" href="#bias" title="Permalink to this headline">¶</a></h2>
+<p><em>Bias</em> is the difference between the expected (or average) prediction of our model and the correct value which we are trying to predict. It measures how far off in general a model’s predictions are from the correct value, which provides a sense of how well a model can conform to the underlying structure of the data. The figure below illustrates an example where the polynomial model does not capture the underlying structure well.  Linear models are classical examples of high bias models as they are less flexible and rarely capture non-linear, non-monotonic relationships.</p>
+<p>We also need to think of bias-variance in relation to resampling.  Models with high bias are rarely affected by the noise introduced by resampling. If a model has high bias, it will have consistency in its resampling performance as illustrated below:</p>
+<p><img alt="" src="../_images/modeling-process-bias-model-1.png" /></p>
+</div>
+<div class="section" id="variance">
+<h2>Variance<a class="headerlink" href="#variance" title="Permalink to this headline">¶</a></h2>
+<p>On the other hand, error due to <em>variance</em> is defined as the variability of a model prediction for a given data point. Many models (e.g., <em>k</em>-nearest neighbor, decision trees, gradient boosting machines) are very adaptable and offer extreme flexibility in the patterns that they can fit to.  However, these models offer their own problems as they run the risk of overfitting to the training data.  Although you may achieve very good performance on your training data, the model will not automatically generalize well to unseen data.</p>
+<p>The following illustrates how a high variance k-nearest neighbor model fit to a single data set captures the underlying non-linear, non-monotonic data structure well but also overfits to individual data points (left). Models fit to 25 bootstrapped replicates of the data are deterred by the noise and generate highly variable predictions (right).</p>
+<p><img alt="" src="../_images/modeling-process-variance-model-1.png" /></p>
+<p>Since high variance models are more prone to overfitting, using resampling procedures are critical to reduce this risk.  Moreover, many algorithms that are capable of achieving high generalization performance have lots of <em>hyperparameters</em> that control the level of model complexity (i.e., the tradeoff between bias and variance).</p>
+</div>
+<div class="section" id="hyperparameter-tuning">
+<h2>Hyperparameter tuning<a class="headerlink" href="#hyperparameter-tuning" title="Permalink to this headline">¶</a></h2>
+<p>Hyperparameters (aka <em>tuning parameters</em>) are the “knobs to twiddle”<a class="footnote-reference brackets" href="#twiddle" id="id14">3</a>.  Not all algorithms have hyperparameters (e.g., ordinary least squares<a class="footnote-reference brackets" href="#ols-hyper" id="id15">4</a>); however, most have at least one or more.</p>
+<p>The proper setting of these hyperparameters is often dependent on the data and problem at hand and cannot always be estimated by the training data alone. Consequently, we need a method of identifying the optimal setting.  For example, in the high variance example in the previous section, we illustrated a high variance <em>k</em>-nearest neighbor model.  <em>k</em>-nearest neighbor models have a single hyperparameter (<em>k</em>) that determines the predicted value to be made based on the <em>k</em> nearest observations in the training data to the one being predicted.  If <em>k</em> is small (e.g., <span class="math notranslate nohighlight">\(k=3\)</span>), the model will make a prediction for a given observation based on the average of the response values for the 3 observations in the training data most similar to the observation being predicted.  This often results in highly variable predicted values because we are basing the prediction (in this case, an average) on a very small subset of the training data.  As <em>k</em> gets bigger, we base our predictions on an average of a larger subset of the training data, which naturally reduces the variance in our predicted values (remember this for later, averaging often helps to reduce variance!). The figure below illustrates this point.  Smaller <em>k</em> values (e.g., 2, 5, or 10) lead to high variance (but lower bias) and larger values (e.g., 150) lead to high bias (but lower variance). The optimal <em>k</em> value might exist somewhere between 20–50, but how do we know which value of <em>k</em> to use?</p>
+<p><img alt="" src="../_images/modeling-process-knn-options-1.png" /></p>
+<p>One way to perform hyperparameter tuning is to fiddle with hyperparameters manually until you find a great combination of hyperparameter values that result in high predictive accuracy (as measured using <em>k</em>-fold CV, for instance). However, this can be very tedious work depending on the number of hyperparameters. An alternative approach is to perform a <em>grid search</em>. A grid search is an automated approach to searching across many combinations of hyperparameter values.</p>
+<p>For the simple example above, a grid search would predefine a candidate set of values for <em>k</em> (e.g., <span class="math notranslate nohighlight">\(k = 1, 2, \dots, j\)</span>) and perform a resampling method (e.g., <em>k</em>-fold CV) to estimate which <em>k</em> value generalizes the best to unseen data.  The plots in the below examples illustrate the results from a grid search to assess <span class="math notranslate nohighlight">\(k = 3, 5, \dots, 150\)</span> using repeated 10-fold CV. The error rate displayed represents the average error for each value of <em>k</em> across all the repeated CV folds. On average, <span class="math notranslate nohighlight">\(k=46\)</span> was the optimal hyperparameter value to minimize error (in this case, RMSE which will be discussed shortly) on unseen data.</p>
+<p><img alt="" src="../_images/modeling-process-knn-tune-1.png" /></p>
+<p>Throughout this book you’ll be exposed to different approaches to performing grid searches. In the above example, we used a <em>full cartesian grid search</em>, which assesses every hyperparameter value manually defined.  However, as models get more complex and offer more hyperparameters, this approach can become computationally burdensome and requires you to define the optimal hyperparameter grid settings to explore.  Additional approaches we’ll illustrate include <em>random grid searches</em> <span id="id16">[<a class="reference internal" href="#id29">BB12</a>]</span> which explores randomly selected hyperparameter values from a range of possible values, <em>early stopping</em> which allows you to stop a grid search once reduction in the error stops marginally improving, <em>sequential model-based optimization</em> <span id="id17">[<a class="reference internal" href="#id30">BBBKegl11</a>]</span> which adaptively resamples candidate hyperparameter values based on approximately optimal performance, and more.</p>
+<p>The following provides an example of a full cartesian grid search using <code class="docutils literal notranslate"><span class="pre">GridSearchCV()</span></code> where we supply it a model object and  hyperparameter values we want to assess. You’ll also notice that we supply it with the kfold object we created previously and the loss function we want to optimize for.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># basic model object</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsRegressor</span><span class="p">()</span>
+
+<span class="c1"># Create grid of hyperparameter values</span>
+<span class="n">hyper_grid</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;n_neighbors&#39;</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">26</span><span class="p">)}</span>
+
+<span class="c1"># Tune a knn model using grid search</span>
+<span class="n">grid_search</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">knn</span><span class="p">,</span> <span class="n">hyper_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="n">kfold</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="n">loss</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Best model&#39;s cross validated RMSE</span>
+<span class="nb">abs</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">best_score_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>46651.2105708044
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Best model&#39;s k value</span>
+<span class="n">results</span><span class="o">.</span><span class="n">best_estimator_</span><span class="o">.</span><span class="n">get_params</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;n_neighbors&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot all RMSE results</span>
+<span class="n">all_rmse</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;k&#39;</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">26</span><span class="p">),</span>
+    <span class="s1">&#39;RMSE&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">[</span><span class="s1">&#39;mean_test_score&#39;</span><span class="p">])</span>
+    <span class="p">})</span>
+    
+<span class="p">(</span><span class="n">ggplot</span><span class="p">(</span><span class="n">all_rmse</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;RMSE&#39;</span><span class="p">))</span>
+ <span class="o">+</span> <span class="n">geom_line</span><span class="p">()</span>
+ <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
+ <span class="o">+</span> <span class="n">ggtitle</span><span class="p">(</span><span class="s2">&quot;Cross validated grid search results&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/modeling_process_34_0.png" src="../_images/modeling_process_34_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8773014538349)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="putting-the-processes-together">
+<h1>Putting the processes together<a class="headerlink" href="#putting-the-processes-together" title="Permalink to this headline">¶</a></h1>
+<p>You’ve now been exposed to many of the fundamental pieces of an ML process. The following combines these code snippets into a larger recipe to show you how they all come together. Rather than just look at the 2 features that we included thus far (<code class="docutils literal notranslate"><span class="pre">Gr_Liv_Area</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">Year_Built</span></code>), we’ll include all numeric features.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To include the categorical features as well we will need to do some feature engineering, which we will discuss in the next session.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create train/test split</span>
+<span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">ames</span><span class="p">,</span> <span class="n">train_size</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span>
+
+<span class="c1"># separate features from labels and only use numeric features</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;number&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;Sale_Price&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y_train</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="s2">&quot;Sale_Price&quot;</span><span class="p">]</span>
+
+<span class="c1"># create KNN model object</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsRegressor</span><span class="p">()</span>
+
+<span class="c1"># define loss function</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="s1">&#39;neg_root_mean_squared_error&#39;</span>
+
+<span class="c1"># create 10 fold CV object</span>
+<span class="n">kfold</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Create grid of hyperparameter values</span>
+<span class="n">hyper_grid</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;n_neighbors&#39;</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">26</span><span class="p">)}</span>
+
+<span class="c1"># Tune a knn model using grid search</span>
+<span class="n">grid_search</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">knn</span><span class="p">,</span> <span class="n">hyper_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="n">kfold</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="n">loss</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Best model&#39;s cross validated RMSE</span>
+<span class="nb">abs</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">best_score_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>41913.12719017566
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Best model&#39;s k value</span>
+<span class="n">results</span><span class="o">.</span><span class="n">best_estimator_</span><span class="o">.</span><span class="n">get_params</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;n_neighbors&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot all RMSE results</span>
+<span class="n">all_rmse</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;k&#39;</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">26</span><span class="p">),</span> 
+    <span class="s1">&#39;RMSE&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">[</span><span class="s1">&#39;mean_test_score&#39;</span><span class="p">])</span>
+    <span class="p">})</span>
+<span class="p">(</span><span class="n">ggplot</span><span class="p">(</span><span class="n">all_rmse</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;RMSE&#39;</span><span class="p">))</span>
+ <span class="o">+</span> <span class="n">geom_line</span><span class="p">()</span>
+ <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
+ <span class="o">+</span> <span class="n">ggtitle</span><span class="p">(</span><span class="s2">&quot;Cross validated grid search results&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/modeling_process_38_0.png" src="../_images/modeling_process_38_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8773042916419)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
+<p id="id18"><dl class="citation">
+<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id17">BBBKegl11</a></span></dt>
+<dd><p>James Bergstra, Rémi Bardenet, Yoshua Bengio, and Balázs Kégl. Algorithms for hyper-parameter optimization. <em>Advances in neural information processing systems</em>, 2011.</p>
+</dd>
+<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id16">BB12</a></span></dt>
+<dd><p>James Bergstra and Yoshua Bengio. Random search for hyper-parameter optimization. <em>Journal of Machine Learning Research</em>, 13(Feb):281–305, 2012.</p>
+</dd>
+<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id32">B+01</a></span></dt>
+<dd><p>Leo Breiman and others. Statistical modeling: the two cultures (with comments and a rejoinder by the author). <em>Statistical Science</em>, 16(3):199–231, 2001.</p>
+</dd>
+<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id4">CBHK02</a></span></dt>
+<dd><p>Nitesh V Chawla, Kevin W Bowyer, Lawrence O Hall, and W Philip Kegelmeyer. Smote: synthetic minority over-sampling technique. <em>Journal of Artificial Intelligence Research</em>, 16:321–357, 2002.</p>
+</dd>
+<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id11">DH+97</a></span></dt>
+<dd><p>Anthony Christopher Davison, David Victor Hinkley, and others. <em>Bootstrap Methods and their Application</em>. Volume 1. Cambridge University Press, 1997.</p>
+</dd>
+<dt class="label" id="id25"><span class="brackets">Efr83</span><span class="fn-backref">(<a href="#id10">1</a>,<a href="#id12">2</a>)</span></dt>
+<dd><p>Bradley Efron. Estimating the error rate of a prediction rule: improvement on cross-validation. <em>Journal of the American Statistical Association</em>, 78(382):316–331, 1983.</p>
+</dd>
+<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id13">ET97</a></span></dt>
+<dd><p>Bradley Efron and Robert Tibshirani. Improvements on cross-validation: the 632+ bootstrap method. <em>Journal of the American Statistical Association</em>, 92(438):548–560, 1997.</p>
+</dd>
+<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id9">FHT01</a></span></dt>
+<dd><p>Jerome Friedman, Trevor Hastie, and Robert Tibshirani. <em>The Elements of Statistical Learning</em>. Volume 1. Springer Series in Statistics New York, NY, USA:, 2001.</p>
+</dd>
+<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id6">HBM03</a></span></dt>
+<dd><p>Douglas M Hawkins, Subhash C Basak, and Denise Mills. Assessing model fit by cross-validation. <em>Journal of Chemical Information and Computer Sciences</em>, 43(2):579–586, 2003.</p>
+</dd>
+<dt class="label" id="id31"><span class="brackets"><a class="fn-backref" href="#id8">Kim09</a></span></dt>
+<dd><p>Ji-Hyun Kim. Estimating classification error rate: repeated cross-validation, repeated hold-out and bootstrap. <em>Computational Statistics &amp; Data Analysis</em>, 53(11):3735–3745, 2009.</p>
+</dd>
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id3">KJ13</a></span></dt>
+<dd><p>Max Kuhn and Kjell Johnson. <em>Applied Predictive Modeling</em>. Volume 26. Springer, 2013.</p>
+</dd>
+<dt class="label" id="id22"><span class="brackets">MSP05</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id7">2</a>)</span></dt>
+<dd><p>Annette M Molinaro, Richard Simon, and Ruth M Pfeiffer. Prediction error estimation: a comparison of resampling methods. <em>Bioinformatics</em>, 21(15):3301–3307, 2005.</p>
+</dd>
+<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id1">Wol96</a></span></dt>
+<dd><p>David H Wolpert. The lack of a priori distinctions between learning algorithms. <em>Neural Computation</em>, 8(7):1341–1390, 1996.</p>
+</dd>
+</dl>
+</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="fatml"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>See <a class="reference external" href="https://www.fatml.org/resources/relevant-scholarship">https://www.fatml.org/resources/relevant-scholarship</a> for many discussions regarding implications of poorly applied and interpreted ML.</p>
+</dd>
+<dt class="label" id="deviance"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
+<dd><p>See this StackExchange thread (<a class="reference external" href="http://bit.ly/what-is-deviance">http://bit.ly/what-is-deviance</a>) for a good overview of deviance for different models and in the context of regression versus classification.</p>
+</dd>
+<dt class="label" id="twiddle"><span class="brackets"><a class="fn-backref" href="#id14">3</a></span></dt>
+<dd><p>This phrase comes from Brad Efron’s comments in <span id="id32">[<a class="reference internal" href="#id28">B+01</a>]</span> to control the complexity of machine learning algorithms and, therefore, the bias-variance trade-off.</p>
+</dd>
+<dt class="label" id="ols-hyper"><span class="brackets"><a class="fn-backref" href="#id15">4</a></span></dt>
+<dd><p>At least in the ordinary sense. You could think of polynomial regression as having a single hyperparameter, the degree of the polynomial.</p>
+</dd>
+</dl>
 </div>
 
     <script type="text/x-thebe-config">
@@ -421,11 +1139,11 @@ with your book. For more information about this, see <a class="reference externa
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Content with notebooks</p>
+            <p class="prev-next-title">Machine Learning with Python</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="feature_eng.html" title="next page">
