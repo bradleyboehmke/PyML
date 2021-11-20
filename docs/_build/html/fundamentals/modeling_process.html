@@ -53,7 +53,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Content with notebooks" href="feature_eng.html" />
+    <link rel="next" title="Feature &amp; Target Engineering" href="feature_eng.html" />
     <link rel="prev" title="Machine Learning with Python" href="../intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -111,7 +111,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="feature_eng.html">
-   Content with notebooks
+   Feature &amp; Target Engineering
   </a>
  </li>
 </ul>
@@ -399,13 +399,13 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="modeling-process">
 <h1>Modeling Process<a class="headerlink" href="#modeling-process" title="Permalink to this headline">¶</a></h1>
-<p>Much like EDA, the ML process is very iterative and heuristic-based. With minimal knowledge of the problem or data at hand, it is difficult to know which ML method will perform best.  This is known as the <em>no free lunch</em> theorem for ML <span id="id1">[<a class="reference internal" href="#id19">Wol96</a>]</span>.  Consequently, it is common for many ML approaches to be applied, evaluated, and modified before a final, optimal model can be determined. Performing this process correctly provides great confidence in our outcomes. If not, the results will be useless and, potentially, damaging <a class="footnote-reference brackets" href="#fatml" id="id2">1</a>.</p>
+<p>Much like EDA, the ML process is very iterative and heuristic-based. With minimal knowledge of the problem or data at hand, it is difficult to know which ML method will perform best.  This is known as the <em>no free lunch</em> theorem for ML <span id="id1">[<a class="reference internal" href="#id20">Wol96</a>]</span>.  Consequently, it is common for many ML approaches to be applied, evaluated, and modified before a final, optimal model can be determined. Performing this process correctly provides great confidence in our outcomes. If not, the results will be useless and, potentially, damaging <a class="footnote-reference brackets" href="#fatml" id="id2">1</a>.</p>
 <p>Approaching ML modeling correctly means approaching it strategically by spending our data wisely on learning and validation procedures, properly pre-processing the feature and target variables, minimizing data leakage, tuning hyperparameters, and assessing model performance. Many books and courses portray the modeling process as a short sprint. A better analogy would be a marathon where many iterations of these steps are repeated before eventually finding the final optimal model. This process is illustrated in the figure below.</p>
 <p><img alt="" src="../_images/modeling_process.png" /></p>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="learning-objectives">
 <h1>Learning objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h1>
-<p>Before introducing specific algorithms, this module, and the next, introduce concepts that are fundamental to the ML modeling process and that you will see briskly covered in future modules. By the end of this model you will be able to:</p>
+<p>Before introducing specific algorithms, this module, and the next, introduce concepts that are fundamental to the ML modeling process and that you will see briskly covered in future modules. By the end of this module you will be able to:</p>
 <ol class="simple">
 <li><p>Split your data into training and test sets.</p></li>
 <li><p>Instantiate, train, fit, and evaluate a basic model in both R and Python.</p></li>
@@ -504,7 +504,7 @@
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/modeling_process_6_0.png" src="../_images/modeling_process_6_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8773038760698)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8792579201398)&gt;
 </pre></div>
 </div>
 </div>
@@ -552,12 +552,12 @@ Name: Attrition, dtype: float64
 </div>
 <div class="section" id="class-imbalances">
 <h2>Class imbalances<a class="headerlink" href="#class-imbalances" title="Permalink to this headline">¶</a></h2>
-<p>Imbalanced data can have a significant impact on model predictions and performance <span id="id3">[<a class="reference internal" href="#id20">KJ13</a>]</span>.  Most often this involves classification problems where one class has a very small proportion of observations (e.g., defaults - 5% versus nondefaults - 95%). Several sampling methods have been developed to help remedy class imbalance and most of them can be categorized as either <em>up-sampling</em> or <em>down-sampling</em>.</p>
+<p>Imbalanced data can have a significant impact on model predictions and performance <span id="id3">[<a class="reference internal" href="#id21">KJ13</a>]</span>.  Most often this involves classification problems where one class has a very small proportion of observations (e.g., defaults - 5% versus nondefaults - 95%). Several sampling methods have been developed to help remedy class imbalance and most of them can be categorized as either <em>up-sampling</em> or <em>down-sampling</em>.</p>
 <p>Down-sampling balances the dataset by reducing the size of the abundant class(es) to match the frequencies in the least prevalent class. This method is used when the quantity of data is sufficient. By keeping all samples in the rare class and randomly selecting an equal number of samples in the abundant class, a balanced new dataset can be retrieved for further modeling. Furthermore, the reduced sample size reduces the computation burden imposed by further steps in the ML process.</p>
 <p>On the contrary, up-sampling is used when the quantity of data is insufficient. It tries to balance the dataset by increasing the size of rarer samples. Rather than getting rid of abundant samples, new rare samples are generated by using repetition or bootstrapping.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>There is no absolute advantage of one sampling method over another. Application of these two methods depends on the use case it applies to and the data set itself. A combination of over- and under-sampling is often successful and a common approach is known as Synthetic Minority Over-Sampling Technique, or SMOTE <span id="id4">[<a class="reference internal" href="#id21">CBHK02</a>]</span>.</p>
+<p>There is no absolute advantage of one sampling method over another. Application of these two methods depends on the use case it applies to and the data set itself. A combination of over- and under-sampling is often successful and a common approach is known as Synthetic Minority Over-Sampling Technique, or SMOTE <span id="id4">[<a class="reference internal" href="#id22">CBHK02</a>]</span>.</p>
 </div>
 </div>
 </div>
@@ -611,9 +611,11 @@ Name: Attrition, dtype: float64
 <div class="section" id="regression-models">
 <h2>Regression models<a class="headerlink" href="#regression-models" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><strong>MSE</strong>: Mean squared error is the average of the squared error (<span class="math notranslate nohighlight">\(MSE = \frac{1}{n} \sum^n_{i=1}(y_i - \hat y_i)^2\)</span>)^[This deviates slightly from the usual definition of MSE in ordinary linear regression, where we divide by <span class="math notranslate nohighlight">\(n-p\)</span> (to adjust for bias) as opposed to <span class="math notranslate nohighlight">\(n\)</span>.]. The squared component results in larger errors having larger penalties.  This (along with RMSE) is the most common error metric to use. <strong>Objective: minimize</strong></p></li>
+<li><p><strong>MSE</strong>: Mean squared error is the average of the squared error (<span class="math notranslate nohighlight">\(MSE = \frac{1}{n} \sum^n_{i=1}(y_i - \hat y_i)^2\)</span>)<a class="footnote-reference brackets" href="#mse-deviates" id="id5">2</a>. The squared component results in larger errors having larger penalties.  This (along with RMSE) is the most common error metric to use. <strong>Objective: minimize</strong></p></li>
+</ul>
+<ul class="simple">
 <li><p><strong>RMSE</strong>: Root mean squared error.  This simply takes the square root of the MSE metric (<span class="math notranslate nohighlight">\(RMSE = \sqrt{\frac{1}{n} \sum^n_{i=1}(y_i - \hat y_i)^2}\)</span>) so that your error is in the same units as your response variable. If your response variable units are dollars, the units of MSE are dollars-squared, but the RMSE will be in dollars. <strong>Objective: minimize</strong></p></li>
-<li><p><strong>Deviance</strong>: Short for mean residual deviance. In essence, it provides a degree to which a model explains the variation in a set of data when using maximum likelihood estimation. Essentially this compares a saturated model (i.e. fully featured model) to an unsaturated model (i.e. intercept only or average). If the response variable distribution is Gaussian, then it will be approximately equal to MSE.  When not, it usually gives a more useful estimate of error. Deviance is often used with classification models. <a class="footnote-reference brackets" href="#deviance" id="id5">2</a> <strong>Objective: minimize</strong></p></li>
+<li><p><strong>Deviance</strong>: Short for mean residual deviance. In essence, it provides a degree to which a model explains the variation in a set of data when using maximum likelihood estimation. Essentially this compares a saturated model (i.e. fully featured model) to an unsaturated model (i.e. intercept only or average). If the response variable distribution is Gaussian, then it will be approximately equal to MSE.  When not, it usually gives a more useful estimate of error. Deviance is often used with classification models. <a class="footnote-reference brackets" href="#deviance" id="id6">3</a> <strong>Objective: minimize</strong></p></li>
 </ul>
 <ul class="simple">
 <li><p><strong>MAE</strong>: Mean absolute error. Similar to MSE but rather than squaring, it just takes the mean absolute difference between the actual and predicted values (<span class="math notranslate nohighlight">\(MAE = \frac{1}{n} \sum^n_{i=1}(\vert y_i - \hat y_i \vert)\)</span>). This results in less emphasis on larger errors than MSE. <strong>Objective: minimize</strong></p></li>
@@ -656,10 +658,10 @@ Name: Attrition, dtype: float64
 <h2>Classification models<a class="headerlink" href="#classification-models" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><strong>Misclassification</strong>: This is the overall error.  For example, say you are predicting 3 classes ( <em>high</em>, <em>medium</em>, <em>low</em> ) and each class has 25, 30, 35 observations respectively (90 observations total). If you misclassify 3 observations of class <em>high</em>, 6 of class <em>medium</em>, and 4 of class <em>low</em>, then you misclassified 13 out of 90 observations resulting in a 14% misclassification rate. <strong>Objective: minimize</strong></p></li>
-<li><p><strong>Mean per class error</strong>\index{mean per class error}: This is the average error rate for each class. For the above example, this would be the mean of <span class="math notranslate nohighlight">\(\frac{3}{25}, \frac{6}{30}, \frac{4}{35}\)</span>, which is 14.5%. If your classes are balanced this will be identical to misclassification. <strong>Objective: minimize</strong></p></li>
+<li><p><strong>Mean per class error</strong>: This is the average error rate for each class. For the above example, this would be the mean of <span class="math notranslate nohighlight">\(\frac{3}{25}, \frac{6}{30}, \frac{4}{35}\)</span>, which is 14.5%. If your classes are balanced this will be identical to misclassification. <strong>Objective: minimize</strong></p></li>
 <li><p><strong>MSE</strong>: Mean squared error. Computes the distance from 1.0 to the probability suggested. So, say we have three classes, A, B, and C, and your model predicts a probability of 0.91 for A, 0.07 for B, and 0.02 for C. If the correct answer was A the <span class="math notranslate nohighlight">\(MSE = 0.09^2 = 0.0081\)</span>, if it is B <span class="math notranslate nohighlight">\(MSE = 0.93^2 = 0.8649\)</span>, if it is C <span class="math notranslate nohighlight">\(MSE = 0.98^2 = 0.9604\)</span>. The squared component results in large differences in probabilities for the true class having larger penalties. <strong>Objective: minimize</strong></p></li>
 <li><p><strong>Cross-entropy (aka Log Loss or Deviance)</strong>: Similar to MSE but it incorporates a log of the predicted probability multiplied by the true class.  Consequently, this metric disproportionately punishes predictions where we predict a small probability for the true class, which is another way of saying having high confidence in the wrong answer is really bad. <strong>Objective: minimize</strong></p></li>
-<li><p><strong>Gini index</strong>\index: Mainly used with tree-based methods and commonly referred to as a measure of <em>purity</em> where a small value indicates that a node contains predominantly observations from a single class. <strong>Objective: minimize</strong></p></li>
+<li><p><strong>Gini index</strong>: Mainly used with tree-based methods and commonly referred to as a measure of <em>purity</em> where a small value indicates that a node contains predominantly observations from a single class. <strong>Objective: minimize</strong></p></li>
 </ul>
 <p>When applying classification models, we often use a <em>confusion matrix</em> to evaluate certain performance measures. A confusion matrix is simply a matrix that compares actual categorical levels (or events) to the predicted categorical levels. When we predict the right level, we refer to this as a <em>true positive</em>.  However, if we predict a level or event that did not happen this is called a <em>false positive</em> (i.e. we predicted a customer would redeem a coupon and they did not). Alternatively, when we do not predict a level or event and it does happen that this is called a <em>false negative</em> (i.e. a customer that we did not predict to redeem a coupon does).</p>
 <p><img alt="" src="../_images/confusion-matrix.png" /></p>
@@ -709,7 +711,7 @@ Name: Attrition, dtype: float64
 <h1>Resampling methods<a class="headerlink" href="#resampling-methods" title="Permalink to this headline">¶</a></h1>
 <p>In the data splitting section we split our data into training and testing sets. Furthermore, we were very explicit about the fact that we <em><strong>do not</strong></em> use the test set to assess model performance during the training phase. So how do we assess the generalization performance of the model?</p>
 <p>One option is to assess an error metric based on the training data, which demonstrated in the last section. Unfortunately, this leads to biased results as some models can perform very well on the training data but not generalize well to a new data set.</p>
-<p>A second method is to use a <em>validation</em> approach, which involves splitting the training set further to create two parts: a training set and a validation set (or <em>holdout set</em>).  We can then train our model(s) on the new training set and estimate the performance on the validation set. Unfortunately, validation using a single holdout set can be highly variable and unreliable unless you are working with very large data sets <span id="id6">[<a class="reference internal" href="#id23">HBM03</a>, <a class="reference internal" href="#id22">MSP05</a>]</span>. As the size of your data set reduces, this concern increases.</p>
+<p>A second method is to use a <em>validation</em> approach, which involves splitting the training set further to create two parts: a training set and a validation set (or <em>holdout set</em>).  We can then train our model(s) on the new training set and estimate the performance on the validation set. Unfortunately, validation using a single holdout set can be highly variable and unreliable unless you are working with very large data sets <span id="id7">[<a class="reference internal" href="#id24">HBM03</a>, <a class="reference internal" href="#id23">MSP05</a>]</span>. As the size of your data set reduces, this concern increases.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Although we stick to our definitions of test, validation, and holdout sets, these terms are sometimes used interchangeably in other literature and software. What’s important to remember is to always put a portion of the data under lock and key until a final model has been selected (we refer to this as the test data, but others refer to it as the holdout set).</p>
@@ -719,10 +721,10 @@ Name: Attrition, dtype: float64
 <h2><em>k</em>-fold cross validation<a class="headerlink" href="#k-fold-cross-validation" title="Permalink to this headline">¶</a></h2>
 <p><em>k</em>-fold cross-validation (aka <em>k</em>-fold CV) is a resampling method that randomly divides the training data into <em>k</em> groups (aka folds) of approximately equal size. The model is fit on <span class="math notranslate nohighlight">\(k-1\)</span> folds and then the remaining fold is used to compute model performance.  This procedure is repeated <em>k</em> times; each time, a different fold is treated as the validation set. This process results in <em>k</em> estimates of the generalization error (say <span class="math notranslate nohighlight">\(\epsilon_1, \epsilon_2, \dots, \epsilon_k\)</span>). Thus, the <em>k</em>-fold CV estimate is computed by averaging the <em>k</em> test errors, providing us with an approximation of the error we might expect on unseen data.</p>
 <p><img alt="" src="../_images/cv.png" /></p>
-<p>Consequently, with <em>k</em>-fold CV, every observation in the training data will be held out one time to be included in the test set as illustrated in the figure below.  In practice, one typically uses <span class="math notranslate nohighlight">\(k = 5\)</span> or <span class="math notranslate nohighlight">\(k = 10\)</span>. There is no formal rule as to the size of <em>k</em>; however, as <em>k</em> gets larger, the difference between the estimated performance and the true performance to be seen on the test set will decrease.  On the other hand, using too large <em>k</em> can introduce computational burdens.  Moreover, <span id="id7">[<a class="reference internal" href="#id22">MSP05</a>]</span> found that <span class="math notranslate nohighlight">\(k=10\)</span> performed similarly to leave-one-out cross validation (LOOCV) which is the most extreme approach (i.e., setting <span class="math notranslate nohighlight">\(k = n\)</span>).</p>
+<p>Consequently, with <em>k</em>-fold CV, every observation in the training data will be held out one time to be included in the test set as illustrated in the figure below.  In practice, one typically uses <span class="math notranslate nohighlight">\(k = 5\)</span> or <span class="math notranslate nohighlight">\(k = 10\)</span>. There is no formal rule as to the size of <em>k</em>; however, as <em>k</em> gets larger, the difference between the estimated performance and the true performance to be seen on the test set will decrease.  On the other hand, using too large <em>k</em> can introduce computational burdens.  Moreover, <span id="id8">[<a class="reference internal" href="#id23">MSP05</a>]</span> found that <span class="math notranslate nohighlight">\(k=10\)</span> performed similarly to leave-one-out cross validation (LOOCV) which is the most extreme approach (i.e., setting <span class="math notranslate nohighlight">\(k = n\)</span>).</p>
 <p>The following is an illustration of 10-fold cross validation on 32 observations. Each observation is used once for validation and nine times for training.</p>
 <p><img alt="" src="../_images/modeling-process-cv-1.png" /></p>
-<p>Although using <span class="math notranslate nohighlight">\(k \geq 10\)</span> helps to minimize the variability in the estimated performance, <em>k</em>-fold CV still tends to have higher variability than bootstrapping.  <span id="id8">[<a class="reference internal" href="#id31">Kim09</a>]</span> showed that repeating <em>k</em>-fold CV can help to increase the precision of the estimated generalization error.  Consequently, for smaller data sets (say <span class="math notranslate nohighlight">\(n &lt; 10,000\)</span>), 10-fold CV repeated 5 or 10 times will improve the accuracy of your estimated performance and also provide an estimate of its variability.</p>
+<p>Although using <span class="math notranslate nohighlight">\(k \geq 10\)</span> helps to minimize the variability in the estimated performance, <em>k</em>-fold CV still tends to have higher variability than bootstrapping.  <span id="id9">[<a class="reference internal" href="#id32">Kim09</a>]</span> showed that repeating <em>k</em>-fold CV can help to increase the precision of the estimated generalization error.  Consequently, for smaller data sets (say <span class="math notranslate nohighlight">\(n &lt; 10,000\)</span>), 10-fold CV repeated 5 or 10 times will improve the accuracy of your estimated performance and also provide an estimate of its variability.</p>
 <p>In Python we use <code class="docutils literal notranslate"><span class="pre">KFold</span></code>, <code class="docutils literal notranslate"><span class="pre">RepeatedKFold</span></code> to create k-fold objects and then <code class="docutils literal notranslate"><span class="pre">cross_val_score</span></code> to train our model across all <em>k</em> folds and provide our loss score for each fold.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -814,11 +816,11 @@ dtype: float64
 </div>
 <div class="section" id="bootstrap-sampling">
 <h2>Bootstrap sampling<a class="headerlink" href="#bootstrap-sampling" title="Permalink to this headline">¶</a></h2>
-<p>A bootstrap sample is a random sample of the data taken with replacement <span id="id9">[<a class="reference internal" href="#id24">FHT01</a>]</span>. This means that, after a data point is selected for inclusion in the subset, it’s still available for further selection. A bootstrap sample is the same size as the original data set from which it was constructed. The figure below provides a schematic of bootstrap sampling where each bootstrap sample contains 12 observations just as in the original data set. Furthermore, bootstrap sampling will contain approximately the same distribution of values (represented by colors) as the original data set.</p>
+<p>A bootstrap sample is a random sample of the data taken with replacement <span id="id10">[<a class="reference internal" href="#id25">FHT01</a>]</span>. This means that, after a data point is selected for inclusion in the subset, it’s still available for further selection. A bootstrap sample is the same size as the original data set from which it was constructed. The figure below provides a schematic of bootstrap sampling where each bootstrap sample contains 12 observations just as in the original data set. Furthermore, bootstrap sampling will contain approximately the same distribution of values (represented by colors) as the original data set.</p>
 <p><img alt="" src="../_images/bootstrap-scheme.png" /></p>
 <p>Since samples are drawn with replacement, each bootstrap sample is likely to contain duplicate values. In fact, on average, <span class="math notranslate nohighlight">\(\approx 63.21\)</span>% of the original sample ends up in any particular bootstrap sample. The original observations not contained in a particular bootstrap sample are considered <em>out-of-bag</em> (OOB). When bootstrapping, a model can be built on the selected samples and validated on the OOB samples; this is often done, for example, in random forests.</p>
-<p>Since observations are replicated in bootstrapping, there tends to be less variability in the error measure compared with <em>k</em>-fold CV <span id="id10">[<a class="reference internal" href="#id25">Efr83</a>]</span>. However, this can also increase the bias of your error estimate.  This can be problematic with smaller data sets; however, for most average-to-large data sets (say <span class="math notranslate nohighlight">\(n \geq 1,000\)</span>) this concern is often negligible.</p>
-<p>The figure that follows compares bootstrapping to 10-fold CV on a small data set with <span class="math notranslate nohighlight">\(n = 32\)</span> observations. A thorough introduction to bootstrappingis provided in <span id="id11">[<a class="reference internal" href="#id26">DH+97</a>]</span>.</p>
+<p>Since observations are replicated in bootstrapping, there tends to be less variability in the error measure compared with <em>k</em>-fold CV <span id="id11">[<a class="reference internal" href="#id26">Efr83</a>]</span>. However, this can also increase the bias of your error estimate.  This can be problematic with smaller data sets; however, for most average-to-large data sets (say <span class="math notranslate nohighlight">\(n \geq 1,000\)</span>) this concern is often negligible.</p>
+<p>The figure that follows compares bootstrapping to 10-fold CV on a small data set with <span class="math notranslate nohighlight">\(n = 32\)</span> observations. A thorough introduction to bootstrappingis provided in <span id="id12">[<a class="reference internal" href="#id27">DH+97</a>]</span>.</p>
 <p><img alt="" src="../_images/modeling-process-sampling-comparison-1.png" /></p>
 <p>Although bootstrapping is not built into scikit-learn as easily as <code class="docutils literal notranslate"><span class="pre">KFold</span></code>, we can create bootstrap samples fairly easily with the <code class="docutils literal notranslate"><span class="pre">sklearn.utils.resamples()</span></code> function as illustrated in the code chunk below.</p>
 <div class="cell docutils container">
@@ -854,16 +856,16 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bootstrap 0: 49877.88
-Bootstrap 1: 48359.66
-Bootstrap 2: 46211.96
-Bootstrap 3: 48303.46
-Bootstrap 4: 50625.86
-Bootstrap 5: 48919.41
-Bootstrap 6: 50854.34
-Bootstrap 7: 50620.42
-Bootstrap 8: 48624.72
-Bootstrap 9: 49873.07
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bootstrap 0: 49820.35
+Bootstrap 1: 49601.9
+Bootstrap 2: 46161.37
+Bootstrap 3: 51941.1
+Bootstrap 4: 52529.96
+Bootstrap 5: 45394.8
+Bootstrap 6: 52161.68
+Bootstrap 7: 50844.96
+Bootstrap 8: 52424.28
+Bootstrap 9: 44402.16
 </pre></div>
 </div>
 </div>
@@ -876,7 +878,7 @@ Bootstrap 9: 49873.07
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>49227.07581610941
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>49528.256181775825
 </pre></div>
 </div>
 </div>
@@ -885,7 +887,7 @@ Bootstrap 9: 49873.07
 <div class="section" id="alternatives">
 <h3>Alternatives<a class="headerlink" href="#alternatives" title="Permalink to this headline">¶</a></h3>
 <p>It is important to note that there are other useful resampling procedures. If you’re working with time-series specific data then you will want to incorporate rolling origin and other time series resampling procedures, which are also available in scikit-learn.</p>
-<p>Additionally, <span id="id12">[<a class="reference internal" href="#id25">Efr83</a>]</span> developed the “632 method” and <span id="id13">[<a class="reference internal" href="#id27">ET97</a>]</span> discuss the “632+ method”; both approaches seek to minimize biases experienced with bootstrapping on smaller data sets.</p>
+<p>Additionally, <span id="id13">[<a class="reference internal" href="#id26">Efr83</a>]</span> developed the “632 method” and <span id="id14">[<a class="reference internal" href="#id28">ET97</a>]</span> discuss the “632+ method”; both approaches seek to minimize biases experienced with bootstrapping on smaller data sets.</p>
 </div>
 </div>
 </div>
@@ -907,13 +909,13 @@ Bootstrap 9: 49873.07
 </div>
 <div class="section" id="hyperparameter-tuning">
 <h2>Hyperparameter tuning<a class="headerlink" href="#hyperparameter-tuning" title="Permalink to this headline">¶</a></h2>
-<p>Hyperparameters (aka <em>tuning parameters</em>) are the “knobs to twiddle”<a class="footnote-reference brackets" href="#twiddle" id="id14">3</a>.  Not all algorithms have hyperparameters (e.g., ordinary least squares<a class="footnote-reference brackets" href="#ols-hyper" id="id15">4</a>); however, most have at least one or more.</p>
+<p>Hyperparameters (aka <em>tuning parameters</em>) are the “knobs to twiddle”<a class="footnote-reference brackets" href="#twiddle" id="id15">4</a>.  Not all algorithms have hyperparameters (e.g., ordinary least squares<a class="footnote-reference brackets" href="#ols-hyper" id="id16">5</a>); however, most have at least one or more.</p>
 <p>The proper setting of these hyperparameters is often dependent on the data and problem at hand and cannot always be estimated by the training data alone. Consequently, we need a method of identifying the optimal setting.  For example, in the high variance example in the previous section, we illustrated a high variance <em>k</em>-nearest neighbor model.  <em>k</em>-nearest neighbor models have a single hyperparameter (<em>k</em>) that determines the predicted value to be made based on the <em>k</em> nearest observations in the training data to the one being predicted.  If <em>k</em> is small (e.g., <span class="math notranslate nohighlight">\(k=3\)</span>), the model will make a prediction for a given observation based on the average of the response values for the 3 observations in the training data most similar to the observation being predicted.  This often results in highly variable predicted values because we are basing the prediction (in this case, an average) on a very small subset of the training data.  As <em>k</em> gets bigger, we base our predictions on an average of a larger subset of the training data, which naturally reduces the variance in our predicted values (remember this for later, averaging often helps to reduce variance!). The figure below illustrates this point.  Smaller <em>k</em> values (e.g., 2, 5, or 10) lead to high variance (but lower bias) and larger values (e.g., 150) lead to high bias (but lower variance). The optimal <em>k</em> value might exist somewhere between 20–50, but how do we know which value of <em>k</em> to use?</p>
 <p><img alt="" src="../_images/modeling-process-knn-options-1.png" /></p>
 <p>One way to perform hyperparameter tuning is to fiddle with hyperparameters manually until you find a great combination of hyperparameter values that result in high predictive accuracy (as measured using <em>k</em>-fold CV, for instance). However, this can be very tedious work depending on the number of hyperparameters. An alternative approach is to perform a <em>grid search</em>. A grid search is an automated approach to searching across many combinations of hyperparameter values.</p>
 <p>For the simple example above, a grid search would predefine a candidate set of values for <em>k</em> (e.g., <span class="math notranslate nohighlight">\(k = 1, 2, \dots, j\)</span>) and perform a resampling method (e.g., <em>k</em>-fold CV) to estimate which <em>k</em> value generalizes the best to unseen data.  The plots in the below examples illustrate the results from a grid search to assess <span class="math notranslate nohighlight">\(k = 3, 5, \dots, 150\)</span> using repeated 10-fold CV. The error rate displayed represents the average error for each value of <em>k</em> across all the repeated CV folds. On average, <span class="math notranslate nohighlight">\(k=46\)</span> was the optimal hyperparameter value to minimize error (in this case, RMSE which will be discussed shortly) on unseen data.</p>
 <p><img alt="" src="../_images/modeling-process-knn-tune-1.png" /></p>
-<p>Throughout this book you’ll be exposed to different approaches to performing grid searches. In the above example, we used a <em>full cartesian grid search</em>, which assesses every hyperparameter value manually defined.  However, as models get more complex and offer more hyperparameters, this approach can become computationally burdensome and requires you to define the optimal hyperparameter grid settings to explore.  Additional approaches we’ll illustrate include <em>random grid searches</em> <span id="id16">[<a class="reference internal" href="#id29">BB12</a>]</span> which explores randomly selected hyperparameter values from a range of possible values, <em>early stopping</em> which allows you to stop a grid search once reduction in the error stops marginally improving, <em>sequential model-based optimization</em> <span id="id17">[<a class="reference internal" href="#id30">BBBKegl11</a>]</span> which adaptively resamples candidate hyperparameter values based on approximately optimal performance, and more.</p>
+<p>Throughout this book you’ll be exposed to different approaches to performing grid searches. In the above example, we used a <em>full cartesian grid search</em>, which assesses every hyperparameter value manually defined.  However, as models get more complex and offer more hyperparameters, this approach can become computationally burdensome and requires you to define the optimal hyperparameter grid settings to explore.  Additional approaches we’ll illustrate include <em>random grid searches</em> <span id="id17">[<a class="reference internal" href="#id30">BB12</a>]</span> which explores randomly selected hyperparameter values from a range of possible values, <em>early stopping</em> which allows you to stop a grid search once reduction in the error stops marginally improving, <em>sequential model-based optimization</em> <span id="id18">[<a class="reference internal" href="#id31">BBBKegl11</a>]</span> which adaptively resamples candidate hyperparameter values based on approximately optimal performance, and more.</p>
 <p>The following provides an example of a full cartesian grid search using <code class="docutils literal notranslate"><span class="pre">GridSearchCV()</span></code> where we supply it a model object and  hyperparameter values we want to assess. You’ll also notice that we supply it with the kfold object we created previously and the loss function we want to optimize for.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -968,7 +970,7 @@ Bootstrap 9: 49873.07
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/modeling_process_34_0.png" src="../_images/modeling_process_34_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8773014538349)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8792555801119)&gt;
 </pre></div>
 </div>
 </div>
@@ -1047,7 +1049,7 @@ Bootstrap 9: 49873.07
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/modeling_process_38_0.png" src="../_images/modeling_process_38_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8773042916419)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (8792584096106)&gt;
 </pre></div>
 </div>
 </div>
@@ -1055,45 +1057,63 @@ Bootstrap 9: 49873.07
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="references">
 <h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
-<p id="id18"><dl class="citation">
-<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id17">BBBKegl11</a></span></dt>
+<p id="id19"><dl class="citation">
+<dt class="label" id="id31"><span class="brackets"><a class="fn-backref" href="#id18">BBBKegl11</a></span></dt>
 <dd><p>James Bergstra, Rémi Bardenet, Yoshua Bengio, and Balázs Kégl. Algorithms for hyper-parameter optimization. <em>Advances in neural information processing systems</em>, 2011.</p>
 </dd>
-<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id16">BB12</a></span></dt>
+<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id17">BB12</a></span></dt>
 <dd><p>James Bergstra and Yoshua Bengio. Random search for hyper-parameter optimization. <em>Journal of Machine Learning Research</em>, 13(Feb):281–305, 2012.</p>
 </dd>
-<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id32">B+01</a></span></dt>
+<dt class="label" id="id35"><span class="brackets">BC64</span></dt>
+<dd><p>George EP Box and David R Cox. An analysis of transformations. <em>Journal of the Royal Statistical Society. Series B (Methodological)</em>, pages 211–252, 1964.</p>
+</dd>
+<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id39">B+01</a></span></dt>
 <dd><p>Leo Breiman and others. Statistical modeling: the two cultures (with comments and a rejoinder by the author). <em>Statistical Science</em>, 16(3):199–231, 2001.</p>
 </dd>
-<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id4">CBHK02</a></span></dt>
+<dt class="label" id="id36"><span class="brackets">CR81</span></dt>
+<dd><p>Raymond J Carroll and David Ruppert. On prediction and the power transformation family. <em>Biometrika</em>, 68(3):609–615, 1981.</p>
+</dd>
+<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id4">CBHK02</a></span></dt>
 <dd><p>Nitesh V Chawla, Kevin W Bowyer, Lawrence O Hall, and W Philip Kegelmeyer. Smote: synthetic minority over-sampling technique. <em>Journal of Artificial Intelligence Research</em>, 16:321–357, 2002.</p>
 </dd>
-<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id11">DH+97</a></span></dt>
+<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id12">DH+97</a></span></dt>
 <dd><p>Anthony Christopher Davison, David Victor Hinkley, and others. <em>Bootstrap Methods and their Application</em>. Volume 1. Cambridge University Press, 1997.</p>
 </dd>
-<dt class="label" id="id25"><span class="brackets">Efr83</span><span class="fn-backref">(<a href="#id10">1</a>,<a href="#id12">2</a>)</span></dt>
+<dt class="label" id="id26"><span class="brackets">Efr83</span><span class="fn-backref">(<a href="#id11">1</a>,<a href="#id13">2</a>)</span></dt>
 <dd><p>Bradley Efron. Estimating the error rate of a prediction rule: improvement on cross-validation. <em>Journal of the American Statistical Association</em>, 78(382):316–331, 1983.</p>
 </dd>
-<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id13">ET97</a></span></dt>
+<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id14">ET97</a></span></dt>
 <dd><p>Bradley Efron and Robert Tibshirani. Improvements on cross-validation: the 632+ bootstrap method. <em>Journal of the American Statistical Association</em>, 92(438):548–560, 1997.</p>
 </dd>
-<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id9">FHT01</a></span></dt>
+<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id10">FHT01</a></span></dt>
 <dd><p>Jerome Friedman, Trevor Hastie, and Robert Tibshirani. <em>The Elements of Statistical Learning</em>. Volume 1. Springer Series in Statistics New York, NY, USA:, 2001.</p>
 </dd>
-<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id6">HBM03</a></span></dt>
+<dt class="label" id="id38"><span class="brackets">Gow71</span></dt>
+<dd><p>John C Gower. A general coefficient of similarity and some of its properties. <em>Biometrics</em>, pages 857–871, 1971.</p>
+</dd>
+<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id7">HBM03</a></span></dt>
 <dd><p>Douglas M Hawkins, Subhash C Basak, and Denise Mills. Assessing model fit by cross-validation. <em>Journal of Chemical Information and Computer Sciences</em>, 43(2):579–586, 2003.</p>
 </dd>
-<dt class="label" id="id31"><span class="brackets"><a class="fn-backref" href="#id8">Kim09</a></span></dt>
+<dt class="label" id="id32"><span class="brackets"><a class="fn-backref" href="#id9">Kim09</a></span></dt>
 <dd><p>Ji-Hyun Kim. Estimating classification error rate: repeated cross-validation, repeated hold-out and bootstrap. <em>Computational Statistics &amp; Data Analysis</em>, 53(11):3735–3745, 2009.</p>
 </dd>
-<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id3">KJ13</a></span></dt>
+<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id3">KJ13</a></span></dt>
 <dd><p>Max Kuhn and Kjell Johnson. <em>Applied Predictive Modeling</em>. Volume 26. Springer, 2013.</p>
 </dd>
-<dt class="label" id="id22"><span class="brackets">MSP05</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id7">2</a>)</span></dt>
+<dt class="label" id="id33"><span class="brackets">KJ19</span></dt>
+<dd><p>Max Kuhn and Kjell Johnson. <em>Feature Engineering and Selection: A Practical Approach for Predictive Models</em>. Chapman &amp; Hall/CRC, 2019.</p>
+</dd>
+<dt class="label" id="id37"><span class="brackets">LR14</span></dt>
+<dd><p>Roderick JA Little and Donald B Rubin. <em>Statistical Analysis with Missing Data</em>. Volume 333. John Wiley &amp; Sons, 2014.</p>
+</dd>
+<dt class="label" id="id23"><span class="brackets">MSP05</span><span class="fn-backref">(<a href="#id7">1</a>,<a href="#id8">2</a>)</span></dt>
 <dd><p>Annette M Molinaro, Richard Simon, and Ruth M Pfeiffer. Prediction error estimation: a comparison of resampling methods. <em>Bioinformatics</em>, 21(15):3301–3307, 2005.</p>
 </dd>
-<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id1">Wol96</a></span></dt>
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id1">Wol96</a></span></dt>
 <dd><p>David H Wolpert. The lack of a priori distinctions between learning algorithms. <em>Neural Computation</em>, 8(7):1341–1390, 1996.</p>
+</dd>
+<dt class="label" id="id34"><span class="brackets">ZC18</span></dt>
+<dd><p>Alice Zheng and Amanda Casari. <em>Feature Engineering for Machine Learning: Principles and Techniques for Data Scientists</em>. O'Reilly Media, Inc., 2018.</p>
 </dd>
 </dl>
 </p>
@@ -1102,13 +1122,16 @@ Bootstrap 9: 49873.07
 <dt class="label" id="fatml"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p>See <a class="reference external" href="https://www.fatml.org/resources/relevant-scholarship">https://www.fatml.org/resources/relevant-scholarship</a> for many discussions regarding implications of poorly applied and interpreted ML.</p>
 </dd>
-<dt class="label" id="deviance"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
+<dt class="label" id="mse-deviates"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
+<dd><p>This deviates slightly from the usual definition of MSE in ordinary linear regression, where we divide by <span class="math notranslate nohighlight">\(n-p\)</span> (to adjust for bias) as opposed to <span class="math notranslate nohighlight">\(n\)</span>.</p>
+</dd>
+<dt class="label" id="deviance"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
 <dd><p>See this StackExchange thread (<a class="reference external" href="http://bit.ly/what-is-deviance">http://bit.ly/what-is-deviance</a>) for a good overview of deviance for different models and in the context of regression versus classification.</p>
 </dd>
-<dt class="label" id="twiddle"><span class="brackets"><a class="fn-backref" href="#id14">3</a></span></dt>
-<dd><p>This phrase comes from Brad Efron’s comments in <span id="id32">[<a class="reference internal" href="#id28">B+01</a>]</span> to control the complexity of machine learning algorithms and, therefore, the bias-variance trade-off.</p>
+<dt class="label" id="twiddle"><span class="brackets"><a class="fn-backref" href="#id15">4</a></span></dt>
+<dd><p>This phrase comes from Brad Efron’s comments in <span id="id39">[<a class="reference internal" href="#id29">B+01</a>]</span> to control the complexity of machine learning algorithms and, therefore, the bias-variance trade-off.</p>
 </dd>
-<dt class="label" id="ols-hyper"><span class="brackets"><a class="fn-backref" href="#id15">4</a></span></dt>
+<dt class="label" id="ols-hyper"><span class="brackets"><a class="fn-backref" href="#id16">5</a></span></dt>
 <dd><p>At least in the ordinary sense. You could think of polynomial regression as having a single hyperparameter, the degree of the polynomial.</p>
 </dd>
 </dl>
@@ -1149,7 +1172,7 @@ Bootstrap 9: 49873.07
     <a class='right-next' id="next-link" href="feature_eng.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Content with notebooks</p>
+        <p class="prev-next-title">Feature &amp; Target Engineering</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
